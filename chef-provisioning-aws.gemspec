@@ -12,7 +12,8 @@ Gem::Specification.new do |s|
   s.email = 'jewart@getchef.com'
   s.homepage = 'https://github.com/opscode/chef-provisioning-aws'
 
-  s.add_dependency 'chef', '>= 11.16.4'
+  # XXX temporary workaround for the 12.4.0 breakage.
+  s.add_dependency 'chef', '~> 12.4.1'
   s.add_dependency 'chef-provisioning', '~> 1.0'
   s.add_dependency 'aws-sdk-v1', '>= 1.59.0'
   s.add_dependency 'retryable', '~> 2.0.1'
